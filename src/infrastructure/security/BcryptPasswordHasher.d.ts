@@ -1,0 +1,7 @@
+import { IPasswordHasher } from '../../domain/IPasswordHasher';
+export declare class BcryptPasswordHasher implements IPasswordHasher {
+    private readonly saltRounds;
+    hash(password: string): Promise<string>;
+    compare(password: string, hash: string): Promise<boolean>;
+}
+//# sourceMappingURL=BcryptPasswordHasher.d.ts.map
