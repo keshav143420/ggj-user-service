@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ggj-user-service
+  labels:
+    app: ggj-user-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ggj-user-service
+  template:
+    metadata:
+      labels:
+        app: ggj-user-service
+    spec:
+      containers:
+      - name: ggj-user-service
+        image: ggj-user-service
+        ports:
+        - containerPort: 3000
